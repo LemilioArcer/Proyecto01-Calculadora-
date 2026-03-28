@@ -2,7 +2,6 @@ let fullOp = "";
 let res = 0;
 
 function handleClick(number) {
-
     if (number === "CE") {
         fullOp = "";
         showNumber("0");
@@ -49,14 +48,28 @@ function handleClick(number) {
         let partes = fullOp.split(/[\+\-\*\/\^]/);
         let ultimo = partes[partes.length - 1];
 
+        if (fullOp === "") {
+            fullOp = "0.";
+            showNumber(fullOp);
+            return;
+        }
+
+        if (ultimo === "") {
+            fullOp += "0.";
+            showNumber(fullOp);
+            return;
+        }
+
         if (!ultimo.includes(".")) {
             fullOp += ".";
             showNumber(fullOp);
         }
+
         return;
     }
 
     let operadores = ["+", "-", "*", "/", "^"];
+
     if (operadores.includes(number)) {
         if (fullOp === "" && number !== "-") return;
 
@@ -69,7 +82,6 @@ function handleClick(number) {
 }
 
 function calculate() {
-
     if (fullOp === "") return;
 
     if (/[\+\-\*\/\^]$/.test(fullOp)) {
@@ -98,6 +110,7 @@ function calculate() {
         if (op === "+") resultado = resultado + num;
         if (op === "-") resultado = resultado - num;
         if (op === "*") resultado = resultado * num;
+
         if (op === "/") {
             if (num === 0) {
                 showNumber("Error");
@@ -106,6 +119,7 @@ function calculate() {
             }
             resultado = resultado / num;
         }
+
         if (op === "^") resultado = resultado ** num;
     }
 
@@ -120,7 +134,6 @@ function showNumber(n) {
 }
 
 function addToHistory(operation, result) {
-
     let history = document.getElementById("history");
     if (!history) return;
 
