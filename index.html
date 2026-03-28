@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+    <div class="app-container">
+
+        <div class="calculator-side">
+            <h1>THE APPLE CALCULATOR PRO</h1>
+
+            <div class="main-container">
+
+                <div class="main-screen" id="screen"></div>
+
+                <div class="btn-container">
+                    <button class="btn btn-gray" onclick="handleClick('CE')">CE</button>
+                    <button class="btn btn-gray" onclick="handleClick('+/-')">+/-</button>
+                    <button class="btn btn-gray" onclick="handleClick('^')">^</button>
+                    <button class="btn btn-orange" onclick="handleClick('/')">÷</button>
+                </div>
+
+                <div class="btn-container">
+                    <button class="btn btn-dark" onclick="handleClick(7)">7</button>
+                    <button class="btn btn-dark" onclick="handleClick(8)">8</button>
+                    <button class="btn btn-dark" onclick="handleClick(9)">9</button>
+                    <button class="btn btn-orange" onclick="handleClick('*')">x</button>
+                </div>
+
+                <div class="btn-container">
+                    <button class="btn btn-dark" onclick="handleClick(4)">4</button>
+                    <button class="btn btn-dark" onclick="handleClick(5)">5</button>
+                    <button class="btn btn-dark" onclick="handleClick(6)">6</button>
+                    <button class="btn btn-orange" onclick="handleClick('-')">-</button>
+                </div>
+
+                <div class="btn-container">
+                    <button class="btn btn-dark" onclick="handleClick(1)">1</button>
+                    <button class="btn btn-dark" onclick="handleClick(2)">2</button>
+                    <button class="btn btn-dark" onclick="handleClick(3)">3</button>
+                    <button class="btn btn-orange" onclick="handleClick('+')">+</button>
+                </div>
+
+                <div class="btn-container">
+                    <button class="btn btn-dark zero" onclick="handleClick(0)">0</button>
+                    <button class="btn btn-dark" onclick="handleClick('.')">.</button>
+                    <button class="btn btn-orange" onclick="calculate()">=</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="history-box">
+            <div class="history-header">
+                <div class="history-title">Past Operations</div>
+                <button class="clear-history-btn" onclick="clearHistory()">Clear</button>
+            </div>
+            <div id="history"></div>
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

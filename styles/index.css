@@ -1,0 +1,153 @@
+body {
+    background-color: rgb(79, 79, 79);
+    font-family: Arial, sans-serif;
+}
+
+.app-container {
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+    gap: 80px;
+}
+
+.calculator-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+h1 {
+    color: gold;
+    -webkit-text-stroke: 2px black;
+    font-size: 42px;
+    text-shadow: 0 0 10px white;
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-decoration-thickness: 3px;
+
+}
+
+.main-container {
+    width: 400px;
+    min-height: 700px;
+    border: 1px solid black;
+    padding: 2%;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    background-color: black;
+    box-sizing: border-box;
+}
+
+.main-screen {
+    width: 100%;
+    height: 130px;
+    border-radius: 25px;
+    font-size: 64px;
+    background-color: #0e0e0e;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px black solid;
+    font-size: 40px;
+    background-color: #333;
+    color: white;
+}
+
+.btn-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-gray {
+    background-color: #a5a5a5;
+    color: black;
+}
+
+.btn-orange {
+    background-color: orange;
+}
+
+.zero {
+    width: 180px;
+    border-radius: 40px;
+}
+
+.btn-dark {
+    background-color: #333;
+    color: white;
+}
+
+.history-box {
+    width: 700px;
+    min-height: 826px;
+    background-color: #1f1f1f;
+    border-radius: 35px;
+    padding: 25px;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.history-title {
+    font-size: 34px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px black;
+}
+
+.clear-history-btn {
+    background: none;
+    border: none;
+    color: #d8c2a5;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#history {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.history-item {
+    background-color: #2a2a2a;
+    border-radius: 20px;
+    padding: 18px;
+}
+
+.history-operation {
+    font-size: 22px;
+    color: #cbb08a;
+    margin-bottom: 10px;
+}
+
+.history-result {
+    font-size: 44px;
+    color: white;
+    font-weight: bold;
+}
